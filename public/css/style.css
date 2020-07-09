@@ -58,9 +58,15 @@ nav .navbarLogo {
     padding: 20px;
     list-style: none;
     text-align: start;
+
+    display: flex;
+    justify-content: space-between;
 }
 
 .menu ul {
     padding-left: 0;
     margin-top: 0px;
+}
+.enf {
+    justify-self: end;
 }

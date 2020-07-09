@@ -8,13 +8,17 @@ const Menu = () => {
             <h1>Menu</h1>
             <div id="section-menu" className=" row ">
                 {mainMenu.map((m) => (
-                    <div className="col-12 col-lg-3 col-md-4 col-sm-6 col-xs-12 menu bg-light shadow  mt-2">
+                    <div className="col-12 col-lg-3 col-md-4 col-sm-6 col-xs-12 menu bg-light shadow  mt-2 ">
                         <img src={require('../img/f.jpeg')} className="w-100" />
                         <ul className="w-100 ">
                             {m.names.map((l) => (
                                 <div>
                                     <li className=" mt-1 ">
-                                        <a>{l}</a>
+                                        <div>
+                                            <i className="fa fa-glass mr-2" />
+                                            {l}
+                                        </div>
+                                        <i className="fa fa-glass  enf" />
                                     </li>
                                     <hr />
                                 </div>
