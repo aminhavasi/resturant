@@ -1,19 +1,40 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import menu from './../server/fakeMenu';
+
 const Menu = () => {
+    const mainMenu = menu();
     return (
-        <div id="section-menu">
-            <h1 className="mt-5 text-center ">Menu</h1>
-            <div className="lead bg-dark text-white mb-3 ">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum.
+        <div className="mt-5 text-center">
+            <h1>Menu</h1>
+            <div id="section-menu" className=" row ">
+                {mainMenu.map((m) => (
+                    <div className="col-12 col-lg-3 col-md-4 col-sm-6 col-xs-12 menu bg-light shadow  mt-2">
+                        <img src={require('../img/f.jpeg')} className="w-100" />
+                        <ul className="w-100 ">
+                            {m.names.map((l) => (
+                                <div>
+                                    <li className=" mt-1 ">
+                                        <a>{l}</a>
+                                    </li>
+                                    <hr />
+                                </div>
+                            ))}
+                            <button
+                                className={
+                                    m.cat === 'food'
+                                        ? 'btn btn-danger w-100'
+                                        : m.cat === 'deser'
+                                        ? 'btn btn-success w-100'
+                                        : 'btn btn-primary w-100'
+                                }
+                            >
+                                see more...
+                            </button>
+                        </ul>
+                    </div>
+                ))}
             </div>
         </div>
     );
 };
-
 export default Menu;

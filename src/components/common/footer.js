@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 class Footer extends Component {
     render() {
         return (
-            <footer className="bg-light">
+            <footer className="bg-light mt-5">
                 <div className="container py-3 py-sm-5">
                     <div className="row">
                         <div className="col-12 col-sm-6 col-lg-3">

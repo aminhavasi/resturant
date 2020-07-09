@@ -39,3 +39,28 @@ nav .navbarLogo {
 .jumbotron .social {
     margin-top: 20rem;
 }
+
+#section-menu img {
+    width: 4rem;
+}
+#section-menu {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.menu img {
+    width: 120px;
+    margin-top: 10px;
+}
+.menu ul li {
+    margin-top: 10px;
+    padding: 20px;
+    list-style: none;
+    text-align: start;
+}
+
+.menu ul {
+    padding-left: 0;
+    margin-top: 0px;
+}

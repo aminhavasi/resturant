@@ -13,8 +13,8 @@ const HomePage = () => {
             <div className="container">
                 <Description />
                 <Menu />
-                <Footer />
             </div>
+            <Footer />
         </div>
     );
 };
