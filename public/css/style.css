@@ -19,16 +19,21 @@ nav .navbarLogo {
 .navbar-collapse {
     margin-bottom: 10px;
 }
+
+.conatainr-custom {
+    height: 100vh;
+    overflow: hidden;
+    background: -webkit-linear-gradient(
+        rgba(29, 38, 113, 0.8),
+        rgba(168, 214, 230, 0.8)
+    );
+}
 .jumbotron {
+    opacity: 0.7;
     min-height: 100vh;
     background-image: url('./../resource/img/j1.jpg');
     background-size: cover;
-    background-position: center;
     background-attachment: fixed;
-}
-
-.jumbotron h1 {
-    text-shadow: 1px 2px 2px gray;
 }
 
 .jumbotron .social {

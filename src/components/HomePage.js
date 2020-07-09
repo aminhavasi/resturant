@@ -3,6 +3,7 @@ import Navbar from './common/Navbar';
 import Jumbotron from './jumbotron';
 import Description from './description';
 import Menu from './menu';
+import Footer from './common/footer';
 
 const HomePage = () => {
     return (
@@ -12,6 +13,7 @@ const HomePage = () => {
             <div className="container">
                 <Description />
                 <Menu />
+                <Footer />
             </div>
         </div>
     );
