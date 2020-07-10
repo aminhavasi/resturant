@@ -15,7 +15,7 @@ const Salon = () => {
             <div className="carousel-inner">
                 <div className="carousel-item active">
                     <img
-                        src={require('../img/salon1.jpg')}
+                        src={require('../../img/salon1.jpg')}
                         alt="Los Angeles"
                         width="1100"
                         height="500"
@@ -27,7 +27,7 @@ const Salon = () => {
                 </div>
                 <div className="carousel-item">
                     <img
-                        src={require('../img/salon2.jpg')}
+                        src={require('../../img/salon2.jpg')}
                         alt="Chicago"
                         width="1100"
                         height="500"
@@ -39,7 +39,7 @@ const Salon = () => {
                 </div>
                 <div className="carousel-item">
                     <img
-                        src={require('../img/salon3.jpg')}
+                        src={require('../../img/salon3.jpg')}
                         alt="New York"
                         width="1100"
                         height="500"

@@ -1,10 +1,10 @@
 import React from 'react';
 import Navbar from './common/Navbar';
-import Jumbotron from './jumbotron';
-import Description from './description';
-import Menu from './menu';
+import Jumbotron from './homePage/jumbotron';
+import Description from './homePage/description';
+import Menu from './homePage/menu';
 import Footer from './common/footer';
-import Salon from './salon';
+import Salon from './homePage/salon';
 
 const HomePage = () => {
     return (

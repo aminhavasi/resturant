@@ -1,10 +1,18 @@
 import React from 'react';
 import HomePage from './components/HomePage';
+import { Switch, Redirect, Route } from 'react-router-dom';
+import FoodMenu from './components/menuPage/foodMenu';
+import NotFound from './components/common/notFound';
 
 const App = () => {
     return (
         <div>
-            <HomePage />
+            <Switch>
+                <Route path="/food-menu" component={FoodMenu} />
+                <Route path="/not-found" component={NotFound} />
+                <Route exact path="/" component={HomePage} />
+                <Redirect to="/not-found" />
+            </Switch>
         </div>
     );
 };

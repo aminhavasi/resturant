@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
-import menu from './../server/fakeMenu';
+import menu from '../../server/fakeMenu';
+import { Link } from 'react-router-dom';
 
 const Menu = () => {
     const mainMenu = menu();
@@ -13,10 +14,10 @@ const Menu = () => {
                         <img
                             src={
                                 m.cat === 'food'
-                                    ? require('./../img/f.jpeg')
+                                    ? require('../../img/f.jpeg')
                                     : m.cat === 'deser'
-                                    ? require('../img/desert.jpeg')
-                                    : require('../img/drink.jpg')
+                                    ? require('../../img/desert.jpeg')
+                                    : require('../../img/drink.jpg')
                             }
                             className="w-100"
                         />
@@ -41,7 +42,8 @@ const Menu = () => {
                                     <hr />
                                 </div>
                             ))}
-                            <button
+                            <Link
+                                to="/food-menu"
                                 className={
                                     m.cat === 'food'
                                         ? 'btn btn-danger w-100'
@@ -51,7 +53,7 @@ const Menu = () => {
                                 }
                             >
                                 see more...
-                            </button>
+                            </Link>
                         </ul>
                     </div>
                 ))}

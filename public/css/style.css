@@ -89,3 +89,9 @@ nav .navbarLogo {
 .carousel {
     margin-top: 80px;
 }
+/** food menu page **/
+
+.foodMenuTable:hover {
+    background-color: rgba(168, 214, 230, 0.8);
+    cursor: pointer;
+}
