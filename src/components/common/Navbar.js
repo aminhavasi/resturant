@@ -40,7 +40,7 @@ class Navbar extends Component {
                             </Link>
                         </li>{' '}
                         <li className="nav-item">
-                            <Link to="#section-posts" className="nav-link">
+                            <Link to="#section-salons" className="nav-link">
                                 salon
                             </Link>
                         </li>{' '}

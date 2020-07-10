@@ -43,7 +43,7 @@ const Menu = () => {
                                 </div>
                             ))}
                             <Link
-                                to="/food-menu"
+                                to={m.link}
                                 className={
                                     m.cat === 'food'
                                         ? 'btn btn-danger w-100'
