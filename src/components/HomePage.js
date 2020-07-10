@@ -4,6 +4,7 @@ import Jumbotron from './jumbotron';
 import Description from './description';
 import Menu from './menu';
 import Footer from './common/footer';
+import Salon from './salon';
 
 const HomePage = () => {
     return (
@@ -13,7 +14,9 @@ const HomePage = () => {
             <div className="container">
                 <Description />
                 <Menu />
+                <Salon />
             </div>
+
             <Footer />
         </div>
     );
