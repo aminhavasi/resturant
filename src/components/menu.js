@@ -9,16 +9,34 @@ const Menu = () => {
             <div id="section-menu" className=" row ">
                 {mainMenu.map((m) => (
                     <div className="col-12 col-lg-3 col-md-4 col-sm-6 col-xs-12 menu bg-light shadow  mt-2 ">
-                        <img src={require('../img/f.jpeg')} className="w-100" />
+                        <p className="lead">{m.cat}</p>
+                        <img
+                            src={
+                                m.cat === 'food'
+                                    ? require('./../img/f.jpeg')
+                                    : m.cat === 'deser'
+                                    ? require('../img/desert.jpeg')
+                                    : require('../img/drink.jpg')
+                            }
+                            className="w-100"
+                        />
                         <ul className="w-100 ">
                             {m.names.map((l) => (
                                 <div>
                                     <li className=" mt-1 ">
                                         <div>
-                                            <i className="fa fa-glass mr-2" />
+                                            <i
+                                                className={
+                                                    m.cat === 'food'
+                                                        ? 'fa fa-cutlery mr-2'
+                                                        : m.cat === 'deser'
+                                                        ? 'fa fa-birthday-cake mr-2'
+                                                        : 'fa fa-glass mr-2'
+                                                }
+                                            />
                                             {l}
                                         </div>
-                                        <i className="fa fa-glass  enf" />
+                                        <i className="fa fa-heartbeat text-success  enf" />
                                     </li>
                                     <hr />
                                 </div>

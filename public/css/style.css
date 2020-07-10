@@ -52,6 +52,7 @@ nav .navbarLogo {
 .menu img {
     width: 120px;
     margin-top: 10px;
+    height: 150px;
 }
 .menu ul li {
     margin-top: 10px;
@@ -67,6 +68,14 @@ nav .navbarLogo {
     padding-left: 0;
     margin-top: 0px;
 }
+.menu ul li:hover {
+    background-color: rgba(109, 135, 252, 0.1);
+    cursor: pointer;
+}
 .enf {
     justify-self: end;
+}
+.menu .lead {
+    font-weight: bold;
+    margin-top: 10px;
 }
