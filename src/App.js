@@ -5,11 +5,13 @@ import FoodMenu from './components/menuPage/foodMenu';
 import NotFound from './components/common/notFound';
 import DeserMenu from './components/menuPage/deserMenu';
 import DrinkMenu from './components/menuPage/drinkMenu';
+import Login from './components/auth/login';
 
 const App = () => {
     return (
         <div>
             <Switch>
+                <Route path="/login" component={Login} />
                 <Route path="/food-menu" component={FoodMenu} />
                 <Route path="/deser-menu" component={DeserMenu} />
                 <Route path="/drink-menu" component={DrinkMenu} />

@@ -95,3 +95,20 @@ nav .navbarLogo {
     background-color: rgba(168, 214, 230, 0.8);
     cursor: pointer;
 }
+
+/**login**/
+.login {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-social {
+    height: 40px;
+    width: 200px;
+}
+
+.login a {
+    text-decoration: none;
+}
