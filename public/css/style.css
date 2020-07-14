@@ -112,3 +112,15 @@ nav .navbarLogo {
 .login a {
     text-decoration: none;
 }
+/**register**/
+.register {
+    min-height: 100vh;
+    background-color: #d1e0e0;
+}
+
+.register-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 48px);
+}

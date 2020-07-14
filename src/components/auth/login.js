@@ -3,15 +3,17 @@ import { Link } from 'react-router-dom';
 const Login = () => {
     return (
         <React.Fragment>
-            <Link className="ml-3 ">back to home</Link>
+            <Link to="/" className="ml-3  ">
+                back to home
+            </Link>
             <div className="login">
                 <form className="card text-center shadow">
-                    <div className="card card-body w-100">
+                    <div className="card card-body ">
                         <h3 className="mt-2">Sign in</h3>
                         <div className="mt-2">
                             <a className="m-1 bg-danger  text-white btn login-social">
                                 <i
-                                    class="fa fa-google-plus-square mr-1"
+                                    className="fa fa-google-plus-square mr-1"
                                     aria-hidden="true"
                                     style={{ fontSize: '1.5rem' }}
                                 ></i>
@@ -49,13 +51,16 @@ const Login = () => {
                         <a href="/" className="text-left mt-2">
                             forgt password?
                         </a>
-                        <a className="mt-3 btn btn-primary text-white">
+                        <Link
+                            to="/signup"
+                            className="mt-3 btn btn-primary text-white"
+                        >
                             <i
-                                class="fa fa-user-plus mr-1"
+                                className="fa fa-user-plus mr-1"
                                 aria-hidden="true"
                             ></i>
                             Sign up
-                        </a>
+                        </Link>
                     </div>
                 </form>
             </div>
