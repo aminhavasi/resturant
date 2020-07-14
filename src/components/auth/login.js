@@ -1,6 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { login } from '../../utils/actions/auth';
+import { useDispatch, useSelector } from 'react-redux';
+
 const Login = () => {
+    const loginState = useSelector((state) => state.login);
+    const dispatch = useDispatch();
+
     return (
         <React.Fragment>
             <Link to="/" className="ml-3  ">
@@ -34,12 +40,22 @@ const Login = () => {
                             placeholder="Example@info.com"
                             type="email"
                             title="please enter a your email"
+                            value={loginState.email ? loginState.email : ''}
+                            onChange={(e) =>
+                                dispatch(login(e.target.value, 'email'))
+                            }
                         />
                         <input
                             className="form-control mt-3"
                             placeholder="********"
                             type="password"
                             title="please enter your password"
+                            value={
+                                loginState.password ? loginState.password : ''
+                            }
+                            onChange={(e) =>
+                                dispatch(login(e.target.value, 'password'))
+                            }
                         />
                         <button className="mt-3 btn btn-success ">
                             <i

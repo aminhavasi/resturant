@@ -7,6 +7,7 @@ import DeserMenu from './components/menuPage/deserMenu';
 import DrinkMenu from './components/menuPage/drinkMenu';
 import Login from './components/auth/login';
 import SignUp from './components/auth/signup';
+import Admin from './components/admin/admin';
 
 const App = () => {
     return (
@@ -14,6 +15,7 @@ const App = () => {
             <Switch>
                 <Route path="/login" component={Login} />
                 <Route path="/signup" component={SignUp} />
+                <Route path="/admin" component={Admin} />
 
                 <Route path="/food-menu" component={FoodMenu} />
                 <Route path="/deser-menu" component={DeserMenu} />
