@@ -6,7 +6,7 @@ class Navbar extends Component {
         return (
             <nav className="navbar navbar-expand-md bg-primary navbar-dark fixed-top">
                 <div className="navbarLogo">
-                    <img src={require('./../../img/logo.png')} />
+                    <img src={require('./../../img/logo.png')} alt="navbar" />
                     <p className="navbar-brand " href="#">
                         Resturant
                     </p>

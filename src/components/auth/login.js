@@ -17,7 +17,10 @@ const Login = () => {
                     <div className="card card-body ">
                         <h3 className="mt-2">Sign in</h3>
                         <div className="mt-2">
-                            <a className="m-1 bg-danger  text-white btn login-social">
+                            <a
+                                href="/"
+                                className="m-1 bg-danger  text-white btn login-social"
+                            >
                                 <i
                                     className="fa fa-google-plus-square mr-1"
                                     aria-hidden="true"
@@ -25,7 +28,10 @@ const Login = () => {
                                 ></i>
                                 Sign in with google
                             </a>
-                            <a className="m-1 bg-primary   text-white btn login-social">
+                            <a
+                                href="/"
+                                className="m-1 bg-primary   text-white btn login-social"
+                            >
                                 <i
                                     className="fa fa-facebook-square mr-1 "
                                     style={{ fontSize: '1.2rem' }}
@@ -34,7 +40,7 @@ const Login = () => {
                                 Sign in with facebook
                             </a>
                         </div>
-                        <a style={{ fontWeight: 'bold' }}>or</a>
+                        <span style={{ fontWeight: 'bold' }}>or</span>
                         <input
                             className="form-control mt-3"
                             placeholder="Example@info.com"

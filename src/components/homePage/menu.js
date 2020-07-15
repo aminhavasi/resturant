@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import menu from '../../server/fakeMenu';
 import { Link } from 'react-router-dom';
 
@@ -19,6 +19,7 @@ const Menu = () => {
                                     ? require('../../img/desert.jpeg')
                                     : require('../../img/drink.jpg')
                             }
+                            alt="img"
                             className="w-100"
                         />
                         <ul className="w-100 ">

@@ -9,19 +9,19 @@ class Footer extends Component {
                             <h3>Quick Links</h3>
                             <ul className="list-unstyled">
                                 <li>
-                                    <a href="#">Home</a>
+                                    <a href="/">Home</a>
                                 </li>
                                 <li>
-                                    <a href="#">Whts's news</a>
+                                    <a href="/">Whts's news</a>
                                 </li>{' '}
                                 <li>
-                                    <a href="#">Support</a>
+                                    <a href="/">Support</a>
                                 </li>{' '}
                                 <li>
-                                    <a href="#">My account</a>
+                                    <a href="/">My account</a>
                                 </li>{' '}
                                 <li>
-                                    <a href="#">Cansel Subscription</a>
+                                    <a href="/">Cansel Subscription</a>
                                 </li>
                             </ul>
                         </div>
@@ -29,19 +29,19 @@ class Footer extends Component {
                             <h3>informations</h3>
                             <ul className="list-unstyled">
                                 <li>
-                                    <a href="#">About us</a>
+                                    <a href="/">About us</a>
                                 </li>
                                 <li>
-                                    <a href="#">Jobs</a>
+                                    <a href="/">Jobs</a>
                                 </li>{' '}
                                 <li>
-                                    <a href="#">Press info</a>
+                                    <a href="/">Press info</a>
                                 </li>{' '}
                                 <li>
-                                    <a href="#">Contact</a>
+                                    <a href="/">Contact</a>
                                 </li>{' '}
                                 <li>
-                                    <a href="#">Parntship</a>
+                                    <a href="/">Parntship</a>
                                 </li>
                             </ul>
                         </div>{' '}
@@ -49,29 +49,29 @@ class Footer extends Component {
                             <h3>Follow us</h3>
                             <ul className="list-unstyled">
                                 <li>
-                                    <a href="#">
+                                    <a href="/">
                                         <i className="fa fa-facebook"></i>
                                         Facebook
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="/">
                                         <i className="fa fa-twitter"></i>Twitter
                                     </a>
                                 </li>{' '}
                                 <li>
-                                    <a href="#">
+                                    <a href="/">
                                         <i className="fa fa-instagram"></i>
                                         Instagram
                                     </a>
                                 </li>{' '}
                                 <li>
-                                    <a href="#">
+                                    <a href="/">
                                         <i className="fa fa-youtube"></i>Youtube
                                     </a>
                                 </li>{' '}
                                 <li>
-                                    <a href="#">
+                                    <a href="/">
                                         <i className="fa fa-linkedin">
                                             Linkedin
                                         </i>
