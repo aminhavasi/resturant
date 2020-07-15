@@ -1,6 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { register } from '../../utils/actions/auth';
 const SignUp = () => {
+    const registerState = useSelector((state) => state.register);
+    const dispatch = useDispatch();
+
     return (
         <div className="register">
             <Link style={{ marginTop: '1rem', marginLeft: '1rem' }} to="/">
@@ -34,6 +39,16 @@ const SignUp = () => {
                                 className="form-control"
                                 placeholder="Jhon Adamz"
                                 type="text"
+                                value={
+                                    registerState.username
+                                        ? registerState.username
+                                        : ''
+                                }
+                                onChange={(e) =>
+                                    dispatch(
+                                        register(e.target.value, 'username')
+                                    )
+                                }
                             />
                         </div>
                         <div className="form-group input-group">
@@ -51,6 +66,14 @@ const SignUp = () => {
                                 className="form-control"
                                 placeholder="Example@info.com"
                                 type="email"
+                                value={
+                                    registerState.email
+                                        ? registerState.email
+                                        : ''
+                                }
+                                onChange={(e) =>
+                                    dispatch(register(e.target.value, 'email'))
+                                }
                             />
                         </div>{' '}
                         <div className="form-group input-group">
@@ -64,6 +87,16 @@ const SignUp = () => {
                                 className="form-control"
                                 placeholder="********"
                                 type="password"
+                                value={
+                                    registerState.password
+                                        ? registerState.password
+                                        : ''
+                                }
+                                onChange={(e) =>
+                                    dispatch(
+                                        register(e.target.value, 'password')
+                                    )
+                                }
                             />
                         </div>
                         <button className="btn btn-block btn-primary ">
