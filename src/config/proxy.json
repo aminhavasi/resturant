@@ -1,3 +1,4 @@
 {
-    "api_login": "http://localhost:8000/api/auth/login"
+    "api_login": "http://localhost:8000/api/auth/login",
+    "api_register": "http://localhost:8000/api/auth/register"
 }
