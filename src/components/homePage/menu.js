@@ -3,13 +3,17 @@ import menu from '../../server/fakeMenu';
 import { Link } from 'react-router-dom';
 
 const Menu = () => {
+    let key = 0;
     const mainMenu = menu();
     return (
         <div className="mt-5 text-center">
             <h1>Menu</h1>
             <div id="section-menu" className=" row ">
                 {mainMenu.map((m) => (
-                    <div className="col-12 col-lg-3 col-md-4 col-sm-6 col-xs-12 menu bg-light shadow  mt-2 ">
+                    <div
+                        key={m.id}
+                        className="col-12 col-lg-3 col-md-4 col-sm-6 col-xs-12 menu bg-light shadow  mt-2 "
+                    >
                         <p className="lead">{m.cat}</p>
                         <img
                             src={
@@ -24,7 +28,7 @@ const Menu = () => {
                         />
                         <ul className="w-100 ">
                             {m.names.map((l) => (
-                                <div>
+                                <div key={key++}>
                                     <li className=" mt-1 ">
                                         <div>
                                             <i

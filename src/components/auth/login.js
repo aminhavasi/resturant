@@ -1,19 +1,46 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { login } from '../../utils/actions/auth';
+import { login as httpLogin } from './../../service/httpLogin';
+import { toast, ToastContainer } from 'react-toastify';
 import { useDispatch, useSelector } from 'react-redux';
+import 'react-toastify/dist/ReactToastify.css';
 
-const Login = () => {
+const Login = (props) => {
     const loginState = useSelector((state) => state.login);
     const dispatch = useDispatch();
-
+    const handleLogin = async (e) => {
+        e.preventDefault();
+        try {
+            const email = loginState.email;
+            const password = loginState.password;
+            if (email && password) {
+                const res = await httpLogin(email, password);
+                if (res.status === 400) {
+                    toast.error('email or password is wrong');
+                } else if (res.status === 200) {
+                    await localStorage.setItem('token', res.headers['x-auth']);
+                    props.history.replace('/admin');
+                }
+            } else {
+                toast.warning('please fill fileds');
+            }
+        } catch (err) {
+            toast.error('something went wrong');
+        }
+    };
     return (
         <React.Fragment>
+            <ToastContainer />
+
             <Link to="/" className="ml-3  ">
                 back to home
             </Link>
             <div className="login">
-                <form className="card text-center shadow">
+                <form
+                    onSubmit={(e) => handleLogin(e)}
+                    className="card text-center shadow"
+                >
                     <div className="card card-body ">
                         <h3 className="mt-2">Sign in</h3>
                         <div className="mt-2">
@@ -63,7 +90,7 @@ const Login = () => {
                                 dispatch(login(e.target.value, 'password'))
                             }
                         />
-                        <button className="mt-3 btn btn-success ">
+                        <button type="submit" className="mt-3 btn btn-success ">
                             <i
                                 className="fa fa-sign-in mr-1 "
                                 aria-hidden="true"
