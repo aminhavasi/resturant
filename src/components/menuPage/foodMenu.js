@@ -1,9 +1,21 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Footer from '../common/footer';
 import { Link } from 'react-router-dom';
 import foodMenu from '../../server/foodMenu';
+import { menu as httpMenu } from './../../service/httpmenu';
+
 const FoodMenu = () => {
+    const [food, setFood] = useState({});
+
     const menu = foodMenu();
+    useEffect(() => {
+        httpMenu().then((res) => {
+            setFood(res.data);
+        });
+    }, []);
+    const data = food;
+    let numId = 1;
+
     return (
         <React.Fragment>
             <Link className="btn btn-success btn-sm text-white m-1 p-2" to="/">
@@ -29,13 +41,20 @@ const FoodMenu = () => {
                             </tr>
                         </thead>
                         <tbody>
-                            {menu.map((m) => (
-                                <tr className="foodMenuTable" key={m.id}>
-                                    <td>{m.id}</td>
-                                    <td>{m.name}</td>
-                                    <td>${m.price}</td>
-                                </tr>
-                            ))}
+                            {data.length > 0
+                                ? data.map((m) =>
+                                      m.cat === 'food' ? (
+                                          <tr
+                                              className="foodMenuTable"
+                                              key={m._id}
+                                          >
+                                              <td>{numId++}</td>
+                                              <td>{m.name}</td>
+                                              <td>${m.price}</td>
+                                          </tr>
+                                      ) : null
+                                  )
+                                : null}
                         </tbody>
                     </table>
                 </div>
