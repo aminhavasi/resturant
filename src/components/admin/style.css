@@ -58,3 +58,15 @@
     padding: 5;
     color: white;
 }
+
+#mainAdmin {
+    min-height: calc(100vh - 48px);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.foodMenuTableAdmin:hover {
+    background-color: skyblue;
+    cursor: pointer;
+}
